@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerry-Edits-portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.css'
+        integrity='sha512-GmZYQ9SKTnOea030Tbiat0Y+jhnYLIpsGAe6QTnToi8hI2nNbVMETHeK4wm4MuYMQdrc38x+sX77+kVD01eNsQ=='
+        crossorigin='anonymous' />
+</head>
+
+<body>
+    <section class="section-0" id="section-0">
+        <div class="top-bar">
+            <div class="nav-item">
+                <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"
+                    style="color: black;"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Deepan-senthilkumar" style="color: black;"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.youtube.com/@jerryedits4" style="color: black;"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.instagram.com/jerry_edits_offical/" style="color: black;"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://telegram.me/JerryEditz18" style="color: black;"><i
+                        class="fa-brands fa-telegram"></i></a>
+            </div>
+            <div class="logo">
+                <h1>🎬 Jerry Edits</h1>
+                <h3>Feel the love, vibe the emotion – 30 seconds at a time.</h3>
+            </div>
+            <div class="logo-img-wrapper">
+                <img src="html_finalprojimages/logo.jpg" alt="Jerry-Edits" class="top-bar-logo">
+            </div>
+        </div>
+    </section>
+
+    <nav class="nav-sticky">
+        <div class="nav-header">
+            <div class="nav-brand-wrapper">
+                <img src="html_finalprojimages/logo.jpg" alt="Jerry-Edits" class="nav-logo">
+                <span class="nav-brand">Jerry Edits</span>
+            </div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+            <a href="#section-0">Home </a>
+            <a href="#section-1">About </a>
+            <a href="#section-2">Top Videos </a>
+            <a href="./index1.html">Insights </a>
+            <a href="./index2.html">Videos</a>
+            <a href="#footer">Contact </a>
+        </div>
+    </nav>
+
+    <section class="section-1" id="section-1">
+        <div class="about-img-container">
+            <img src="./html_finalprojimages/about.jpg" alt="About-image">
+        </div>
+        <div class="section-1-content">
+            <span>🎬 Welcome to Jerry Edits </span>
+            <h2>Where Every Status Tells a Story 💙</h2>
+            <p>Jerry Edits is a Tamil WhatsApp status channel known for emotional, romantic, and friendship-based video
+                edits.<br>Each 30-second clip is crafted with trending music, aesthetic visuals, and heartfelt
+                storytelling.<br>Our goal is to connect with emotions and create share-worthy status content.</p>
+            <a href="#section-2"><button>Go to top videos</button></a>
+        </div>
+    </section>
+
+    <section class="section-2" id="section-2">
+        <span>Videos</span>
+        <h2>Top Videos</h2>
+
+        <!-- Loading message -->
+        <div id="featured-loading" style="text-align:center; padding: 20px;">
+            Loading videos...
+        </div>
+
+        <div class="videos-main-div" id="featured-videos-container"></div>
+    </section>
+
+    <section class="section-3" id="section-3">
+        <img src="./html_finalprojimages/logo.jpg" alt="logo">
+        <h3 style="letter-spacing: 0.3cm;">Thanks for Visiting<br>Have a nice day <br>💙</h3>
+        <div class="sub">
+            <a href="https://www.youtube.com/@jerryedits4"><button>Subscribe</button></a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="footer.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            const menuIcon = menuToggle.querySelector('i');
+            const navLinks = navMenu.querySelectorAll('a');
+
+            // Toggle menu active state
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+
+                // Toggle icon classes
+                if (navMenu.classList.contains('active')) {
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-xmark');
+                } else {
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                }
+            });
+
+            // Close menu when clicking any nav link (e.g. smooth scrolls)
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                });
+            });
+        });
+
+        // Fetch channel stats
+        fetch('http://localhost:5000/api/stats')
+            .then(res => res.json())
+            .then(data => {
+                const stats = data.data;
+
+                const subs = Number(stats.subscribers);
+                document.getElementById('subscriber-count').innerText =
+                    subs >= 1000 ? (subs / 1000).toFixed(1) + 'k' : subs;
+
+                const views = Number(stats.totalViews);
+                document.getElementById('total-views').innerText =
+                    views >= 1000000 ? (views / 1000000).toFixed(1) + 'M' :
+                        views >= 1000 ? (views / 1000).toFixed(1) + 'k' : views;
+
+                document.getElementById('total-videos').innerText = stats.totalVideos;
+            })
+            .catch(err => {
+                document.getElementById('subscriber-count').innerText = '536';
+                document.getElementById('total-views').innerText = '277k';
+                document.getElementById('total-videos').innerText = '89';
+            });
+
+        // Fetch most viewed video
+        fetch('http://localhost:5000/api/videos/most-viewed')
+            .then(res => res.json())
+            .then(data => {
+                const views = data.data.views;
+                document.getElementById('most-viewed-views').innerText =
+                    views >= 1000000 ? (views / 1000000).toFixed(1) + 'M' :
+                        views >= 1000 ? (views / 1000).toFixed(1) + 'k' : views;
+            })
+            .catch(err => {
+                document.getElementById('most-viewed-views').innerText = '32k';
+            });
+        fetch('http://localhost:5000/api/videos/featured')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('featured-loading').style.display = 'none';
+
+                const videos = data.data;
+                const container = document.getElementById('featured-videos-container');
+
+                videos.forEach(video => {
+                    const views = video.views >= 1000000
+                        ? (video.views / 1000000).toFixed(1) + 'M'
+                        : video.views >= 1000
+                            ? (video.views / 1000).toFixed(1) + 'k'
+                            : video.views;
+
+                    const card = document.createElement('div');
+                    card.classList.add('videos-div');
+                    card.setAttribute('onclick', `window.open('${video.url}', '_blank')`);
+                    card.innerHTML = `
+                        <img src="${video.thumbnail}" alt="${video.title}">
+                        <div class="videos-content">
+                            <span>status</span>
+                            <h3>${video.title}</h3>
+                            <p>${views} views</p>
+                            <div class="watch-btn-wrap">
+                                <button class="watch-now-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="margin-right:5px;vertical-align:middle;">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    Watch Now
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            })
+            .catch(err => {
+                console.error('Featured videos error:', err);
+                document.getElementById('featured-loading').innerText =
+                    'Failed to load videos.';
+            });
+    </script>
+</body>
+
+</html>

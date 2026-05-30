@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerry-Edits-portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <section class="section-5" id="section-5">
+        <h1> Channel Insights</h1>
+    </section>
+    <section class="section-4" id="section-4">
+        <div>
+
+            <div class="left">
+                <img class="logo" src="html_finalprojimages/logo.jpg" alt="logo">
+                <div class="font">
+                    <p>Jerry-Edits<br></p>
+                    <a href="https://www.youtube.com/@jerryedits4"><button class="button1">Subscribe</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="all">
+        <div class="insights">
+            <p class="value" id="subscriber-count">Loading...</p>
+            <p class="text">Subscribers</p>
+            <p class="description">Total number of subscribers</p>
+        </div>
+        <div class="insights">
+            <p class="value" id="total-views">Loading...</p>
+            <p class="text">Total Channel Views</p>
+            <p class="description">Total views across all videos</p>
+        </div>
+        <div class="insights">
+            <p class="value" id="most-viewed-views">Loading...</p>
+            <p class="text">Most Viewed Video</p>
+            <p class="description">The video with the highest views</p>
+        </div>
+        <div class="insights">
+            <p class="value" id="total-videos">Loading...</p>
+            <p class="text">Total Videos</p>
+            <p class="description">Total number of videos uploaded</p>
+        </div>
+        <div class="insights">
+            <p class="value">@jerryedits4</p>
+            <p class="text">Channel Tag</p>
+            <p class="description">The unique channel handle on YouTube</p>
+        </div>
+        <div class="insights">
+            <p class="value">15 May 2021</p>
+            <p class="text">Started On</p>
+            <p class="description">The date when the channel started</p>
+        </div>
+    </section>
+    <div id="footer-placeholder"></div>
+
+    <script src="footer.js"></script>
+    <script>
+        // Fetch channel stats
+        fetch('http://localhost:5000/api/stats')
+            .then(res => res.json())
+            .then(data => {
+                const stats = data.data;
+
+                const subs = Number(stats.subscribers);
+                document.getElementById('subscriber-count').innerText =
+                    subs >= 1000 ? (subs / 1000).toFixed(1) + 'k' : subs;
+
+                const views = Number(stats.totalViews);
+                document.getElementById('total-views').innerText =
+                    views >= 1000000 ? (views / 1000000).toFixed(1) + 'M' :
+                        views >= 1000 ? (views / 1000).toFixed(1) + 'k' : views;
+
+                document.getElementById('total-videos').innerText = stats.totalVideos;
+            })
+            .catch(err => {
+                document.getElementById('subscriber-count').innerText = '536';
+                document.getElementById('total-views').innerText = '277k';
+                document.getElementById('total-videos').innerText = '89';
+            });
+
+        // Fetch most viewed video
+        fetch('http://localhost:5000/api/videos/most-viewed')
+            .then(res => res.json())
+            .then(data => {
+                const views = data.data.views;
+                document.getElementById('most-viewed-views').innerText =
+                    views >= 1000000 ? (views / 1000000).toFixed(1) + 'M' :
+                        views >= 1000 ? (views / 1000).toFixed(1) + 'k' : views;
+            })
+            .catch(err => {
+                document.getElementById('most-viewed-views').innerText = '32k';
+            });
+    </script>
+</body>
+
+</html>
