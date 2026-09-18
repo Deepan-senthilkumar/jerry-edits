@@ -21,5 +21,5 @@ app.use('/api/stats', require('./routes/stats'));
 
 // Start Server
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on ${process.env.BACKEND_URL}`);
 });

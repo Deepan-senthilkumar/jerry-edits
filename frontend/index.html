@@ -126,7 +126,7 @@
         });
 
         // Fetch channel stats
-        fetch('http://localhost:5000/api/stats')
+        fetch('https://jerry-edits-backend.onrender.com/api/stats')
             .then(res => res.json())
             .then(data => {
                 const stats = data.data;
@@ -149,7 +149,7 @@
             });
 
         // Fetch most viewed video
-        fetch('http://localhost:5000/api/videos/most-viewed')
+        fetch('https://jerry-edits-backend.onrender.com/api/videos/most-viewed')
             .then(res => res.json())
             .then(data => {
                 const views = data.data.views;
@@ -160,7 +160,7 @@
             .catch(err => {
                 document.getElementById('most-viewed-views').innerText = '32k';
             });
-        fetch('http://localhost:5000/api/videos/featured')
+        fetch('https://jerry-edits-backend.onrender.com/api/videos/featured')
             .then(res => res.json())
             .then(data => {
                 document.getElementById('featured-loading').style.display = 'none';

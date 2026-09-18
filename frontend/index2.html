@@ -117,7 +117,7 @@
             }
         }
 
-        fetch('http://localhost:5000/api/videos/by-views')
+        fetch('https://jerry-edits-backend.onrender.com/api/videos/by-views')
             .then(res => res.json())
             .then(data => {
                 document.getElementById('loading').style.display = 'none';
@@ -131,4 +131,4 @@
             });
     </script>
 </body>
-</html>
+</html>
