@@ -45,7 +45,7 @@ html {
 }
 
 .top-bar .nav-item a:hover {
-    color: #ff785d;
+    color: #2b86d9;
 }
 
 .top-bar .logo {
@@ -131,7 +131,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff785d;
+    color: #2b86d9;
 }
 
 /* Main */
@@ -174,7 +174,7 @@ main {
 }
 
 .section-1-content span {
-    color: #ff785d;
+    color: #2b86d9;
     letter-spacing: 2px;
     font-weight: bold;
 }
@@ -215,7 +215,7 @@ main {
 }
 
 .section-2 span {
-    color: #ff785D;
+    color: #2b86d9;
     letter-spacing: 2px;
     font-weight: bold;
     text-transform: uppercase;
@@ -295,19 +295,19 @@ main {
     font-size: 13px;
     font-weight: 700;
     color: #fff;
-    background: linear-gradient(135deg, #ff785d, #ff5e3a);
+    background: linear-gradient(135deg, #2b86d9, #1b65b8);
     border: none;
     border-radius: 25px;
     cursor: pointer;
     letter-spacing: 0.4px;
-    box-shadow: 0 4px 14px rgba(255, 120, 93, 0.38);
+    box-shadow: 0 4px 14px rgba(43, 134, 217, 0.35);
     transition: transform 0.18s ease, box-shadow 0.18s ease;
     pointer-events: none; /* card handles the click */
 }
 
 .section-2 .videos-div:hover .watch-now-btn {
     transform: scale(1.06);
-    box-shadow: 0 6px 20px rgba(255, 120, 93, 0.55);
+    box-shadow: 0 6px 20px rgba(43, 134, 217, 0.55);
 }
 
 /* Section 3 */
@@ -402,7 +402,7 @@ main {
 
 .footer-box-2 a:hover,
 .footer-box-work a:hover {
-    color: #ff785d;
+    color: #2b86d9;
 }
 
 .footer-box .icon-div {
@@ -430,7 +430,7 @@ main {
 }
 
 .footer-box .icon-div i:hover {
-    background-color: #ff785d;
+    background-color: #2b86d9;
     transform: translateY(-3px);
 }
 
@@ -477,7 +477,7 @@ main {
 }
 
 .developer-credit a {
-    color: #ff785d;
+    color: #2b86d9;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s, text-decoration 0.3s;
