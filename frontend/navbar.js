@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <h3>Feel the love, vibe the emotion – 30 seconds at a time.</h3>
                     </div>
                     <div class="logo-img-wrapper">
-                        <img src="html_finalprojimages/logo.jpg" alt="Jerry-Edits" class="top-bar-logo">
+                        <img src="images/logo.jpg" alt="Jerry-Edits" class="top-bar-logo">
                     </div>
                 </div>
             </section>
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <nav class="nav-sticky">
                 <div class="nav-header">
                     <div class="nav-brand-wrapper">
-                        <img src="html_finalprojimages/logo.jpg" alt="Jerry-Edits" class="nav-logo">
+                        <img src="images/logo.jpg" alt="Jerry-Edits" class="nav-logo">
                         <span class="nav-brand">Jerry Edits</span>
                     </div>
                     <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">

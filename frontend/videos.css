@@ -35,7 +35,7 @@ body {
 .section-4 {
     position: relative;
     text-align: center;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(72, 69, 69, 0.7)), url('./html_finalprojimages/background.jpg');
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(72, 69, 69, 0.7)), url('./images/background.jpg');
     background-size: cover;
     background-position: center;
     height: 300px;
