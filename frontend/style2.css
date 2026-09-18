@@ -6,8 +6,8 @@
 
 /* Body */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(239, 238, 243);
     color: #333;
     line-height: 1.6;
     padding: 0;

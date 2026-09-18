@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jerry-Edits-portfolio</title>
+    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="style.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.css'
         integrity='sha512-GmZYQ9SKTnOea030Tbiat0Y+jhnYLIpsGAe6QTnToi8hI2nNbVMETHeK4wm4MuYMQdrc38x+sX77+kVD01eNsQ=='
@@ -47,12 +48,12 @@
             </button>
         </div>
         <div class="nav-menu" id="nav-menu">
-            <a href="#section-0">Home </a>
-            <a href="#section-1">About </a>
-            <a href="#section-2">Top Videos </a>
-            <a href="./index1.html">Insights </a>
-            <a href="./index2.html">Videos</a>
-            <a href="#footer">Contact </a>
+            <a href="index.html#section-0" class="active-nav">Home</a>
+            <a href="index.html#section-1">About</a>
+            <a href="index.html#section-2">Top Videos</a>
+            <a href="index1.html">Insights</a>
+            <a href="index2.html">Videos</a>
+            <a href="#footer">Contact</a>
         </div>
     </nav>
 
@@ -93,37 +94,9 @@
     <div id="footer-placeholder"></div>
 
     <script src="footer.js"></script>
+    <script src="nav.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
-            const menuIcon = menuToggle.querySelector('i');
-            const navLinks = navMenu.querySelectorAll('a');
-
-            // Toggle menu active state
-            menuToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-
-                // Toggle icon classes
-                if (navMenu.classList.contains('active')) {
-                    menuIcon.classList.remove('fa-bars');
-                    menuIcon.classList.add('fa-xmark');
-                } else {
-                    menuIcon.classList.remove('fa-xmark');
-                    menuIcon.classList.add('fa-bars');
-                }
-            });
-
-            // Close menu when clicking any nav link (e.g. smooth scrolls)
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                    menuIcon.classList.remove('fa-xmark');
-                    menuIcon.classList.add('fa-bars');
-                });
-            });
-        });
 
         // Fetch channel stats
         fetch('https://jerry-edits-backend.onrender.com/api/stats')
