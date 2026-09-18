@@ -295,19 +295,19 @@ main {
     font-size: 13px;
     font-weight: 700;
     color: #fff;
-    background: linear-gradient(135deg, #ff4c4c, #ff785d);
+    background: linear-gradient(135deg, #ff785d, #ff5e3a);
     border: none;
     border-radius: 25px;
     cursor: pointer;
     letter-spacing: 0.4px;
-    box-shadow: 0 4px 14px rgba(255, 76, 76, 0.35);
+    box-shadow: 0 4px 14px rgba(255, 120, 93, 0.38);
     transition: transform 0.18s ease, box-shadow 0.18s ease;
     pointer-events: none; /* card handles the click */
 }
 
 .section-2 .videos-div:hover .watch-now-btn {
     transform: scale(1.06);
-    box-shadow: 0 6px 20px rgba(255, 76, 76, 0.5);
+    box-shadow: 0 6px 20px rgba(255, 120, 93, 0.55);
 }
 
 /* Section 3 */

@@ -67,7 +67,7 @@ body {
 .button1 {
     padding: 12px 25px;
     font-size: 1.1rem;
-    background-color: #ff4c4c;
+    background-color: #ff785d;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -76,7 +76,7 @@ body {
 }
 
 .button1:hover {
-    background-color: #ff2e2e;
+    background-color: #e66348;
     transform: scale(1.10);
 }
 
@@ -138,18 +138,18 @@ body {
 .play-btn-circle {
     width: 56px;
     height: 56px;
-    background: rgba(255, 0, 0, 0.88);
+    background: rgba(255, 120, 93, 0.92);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 16px rgba(255, 120, 93, 0.45);
     transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .video-card:hover .play-btn-circle {
     transform: scale(1.12);
-    background: #ff0000;
+    background: #ff5e3a;
 }
 
 /* When card is replaced by iframe */
@@ -195,18 +195,18 @@ body {
     font-size: 16px;
     font-weight: 600;
     color: #fff;
-    background: linear-gradient(135deg, #ff4c4c, #ff785d);
+    background: linear-gradient(135deg, #ff785d, #ff5e3a);
     border: none;
     border-radius: 30px;
     cursor: pointer;
     letter-spacing: 0.5px;
-    box-shadow: 0 4px 16px rgba(255, 76, 76, 0.3);
+    box-shadow: 0 4px 16px rgba(255, 120, 93, 0.35);
     transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s;
 }
 
 .load-more-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(255, 76, 76, 0.45);
+    box-shadow: 0 8px 24px rgba(255, 120, 93, 0.5);
 }
 
 .load-more-btn:active {
