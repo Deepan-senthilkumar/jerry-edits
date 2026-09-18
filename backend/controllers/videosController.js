@@ -211,12 +211,10 @@ const getFeaturedVideos = async (req, res) => {
       };
     });
 
-    // Keep original order from featuredVideos list
-    const ordered = featuredVideos.map(f =>
-      videos.find(v => v.videoId === f.id)
-    ).filter(Boolean);
+    // Sort by highest views first
+    videos.sort((a, b) => b.views - a.views);
 
-    res.status(200).json({ success: true, data: ordered });
+    res.status(200).json({ success: true, data: videos });
 
   } catch (error) {
     console.error('Featured Videos Error:', error.message);

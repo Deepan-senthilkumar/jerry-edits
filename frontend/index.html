@@ -57,13 +57,14 @@
     <script src="js/footer.js"></script>
 
     <script>
-        // Fetch featured videos for home page
-        fetch(`${CONFIG.API_BASE_URL}/api/videos/featured`)
+        // Fetch top 6 most viewed videos for Top Videos section
+        fetch(`${CONFIG.API_BASE_URL}/api/videos/by-views`)
             .then(res => res.json())
             .then(data => {
                 document.getElementById('featured-loading').style.display = 'none';
 
-                const videos = data.data;
+                // Top 6 highest viewed videos
+                const videos = data.data.slice(0, 6);
                 const container = document.getElementById('featured-videos-container');
 
                 videos.forEach(video => {
