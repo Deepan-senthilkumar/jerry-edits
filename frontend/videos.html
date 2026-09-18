@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jerry-Edits - All Videos</title>
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="videos.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/videos.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.css'
         integrity='sha512-GmZYQ9SKTnOea030Tbiat0Y+jhnYLIpsGAe6QTnToi8hI2nNbVMETHeK4wm4MuYMQdrc38x+sX77+kVD01eNsQ=='
         crossorigin='anonymous' />
@@ -34,8 +34,9 @@
     </div>
 
     <div id="footer-placeholder"></div>
-    <script src="navbar.js"></script>
-    <script src="footer.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
 
     <script>
         // Replace thumbnail card with embedded iframe on click
@@ -113,7 +114,7 @@
             }
         }
 
-        fetch('https://jerry-edits-backend.onrender.com/api/videos/by-views')
+        fetch(`${CONFIG.API_BASE_URL}/api/videos/by-views`)
             .then(res => res.json())
             .then(data => {
                 document.getElementById('loading').style.display = 'none';
