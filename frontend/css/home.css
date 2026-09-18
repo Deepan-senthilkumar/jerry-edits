@@ -203,8 +203,17 @@ main {
     font-size: 16px;
     cursor: pointer;
     background-color: #95ADBE;
-    border-radius: 5px solid #95ADBE;
-    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.section-1 .section-1-content button:hover,
+.section-1 .section-1-content a:hover button {
+    background-color: #ff785d;
+    transform: translateY(-2px);
+}
+
+.section-1 .section-1-content button:active {
+    transform: translateY(0);
 }
 
 /* Section 2 */
