@@ -45,7 +45,7 @@ html {
 }
 
 .top-bar .nav-item a:hover {
-    color: #2b86d9;
+    color: #ff785d;
 }
 
 .top-bar .logo {
@@ -131,7 +131,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #2b86d9;
+    color: #ff785d;
 }
 
 /* Main */
@@ -174,7 +174,7 @@ main {
 }
 
 .section-1-content span {
-    color: #2b86d9;
+    color: #ff785d;
     letter-spacing: 2px;
     font-weight: bold;
 }
@@ -215,7 +215,7 @@ main {
 }
 
 .section-2 span {
-    color: #2b86d9;
+    color: #ff785D;
     letter-spacing: 2px;
     font-weight: bold;
     text-transform: uppercase;
@@ -402,7 +402,7 @@ main {
 
 .footer-box-2 a:hover,
 .footer-box-work a:hover {
-    color: #2b86d9;
+    color: #ff785d;
 }
 
 .footer-box .icon-div {
@@ -430,7 +430,7 @@ main {
 }
 
 .footer-box .icon-div i:hover {
-    background-color: #2b86d9;
+    background-color: #ff785d;
     transform: translateY(-3px);
 }
 
@@ -477,7 +477,7 @@ main {
 }
 
 .developer-credit a {
-    color: #2b86d9;
+    color: #ff785d;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s, text-decoration 0.3s;

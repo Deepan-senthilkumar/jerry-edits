@@ -263,7 +263,7 @@ body {
 
 .footer-box-2 a:hover,
 .footer-box-work a:hover {
-    color: #2b86d9;
+    color: #ff785d;
 }
 
 .footer-box .icon-div {
@@ -291,7 +291,7 @@ body {
 }
 
 .footer-box .icon-div i:hover {
-    background-color: #2b86d9;
+    background-color: #ff785d;
     transform: translateY(-3px);
 }
 
@@ -338,7 +338,7 @@ body {
 }
 
 .developer-credit a {
-    color: #2b86d9;
+    color: #ff785d;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s, text-decoration 0.3s;

@@ -27,7 +27,7 @@
 }
 
 .top-bar .nav-item a:hover {
-    color: #2b86d9;
+    color: #ff785d;
 }
 
 .top-bar .logo {
@@ -117,11 +117,11 @@ nav a {
 }
 
 nav a:hover {
-    color: #2b86d9;
+    color: #ff785d;
 }
 
 nav a.active-nav {
-    color: #2b86d9;
+    color: #ff785d;
     position: relative;
 }
 
@@ -132,7 +132,7 @@ nav a.active-nav {
 }
 
 .page-title-section span {
-    color: #2b86d9;
+    color: #ff785d;
     letter-spacing: 2px;
     font-weight: bold;
     text-transform: uppercase;
