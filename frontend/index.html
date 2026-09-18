@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jerry-Edits-portfolio</title>
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="images/logo.jpg">
+    <link rel="apple-touch-icon" href="images/logo.jpg">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.css'
@@ -56,13 +59,14 @@
     <script src="js/footer.js"></script>
 
     <script>
-        // Fetch featured videos for home page
-        fetch(`${CONFIG.API_BASE_URL}/api/videos/featured`)
+        // Fetch top 6 most viewed videos for Top Videos section
+        fetch(`${CONFIG.API_BASE_URL}/api/videos/by-views`)
             .then(res => res.json())
             .then(data => {
                 document.getElementById('featured-loading').style.display = 'none';
 
-                const videos = data.data;
+                // Top 6 highest viewed videos
+                const videos = data.data.slice(0, 6);
                 const container = document.getElementById('featured-videos-container');
 
                 videos.forEach(video => {

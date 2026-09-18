@@ -51,33 +51,42 @@ body {
 }
 
 .section-4 .logo {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(5, 5, 10, 10);
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .section-4 .font p {
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 700;
     margin: 10px 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .button1 {
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    background-color: #2b86d9;
+    padding: 12px 30px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    background-color: #ff0000;
     color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 14px rgba(255, 0, 0, 0.4);
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .button1:hover {
-    background-color: #1b65b8;
-    transform: scale(1.10);
+    background-color: #cc0000;
+    transform: scale(1.06);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6);
 }
 
 /* Videos Grid */
@@ -136,20 +145,25 @@ body {
 }
 
 .play-btn-circle {
-    width: 56px;
-    height: 56px;
-    background: rgba(43, 134, 217, 0.92);
-    border-radius: 50%;
+    width: 64px;
+    height: 44px;
+    background-color: #ff0000;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 16px rgba(43, 134, 217, 0.45);
-    transition: transform 0.2s ease, background 0.2s ease;
+    box-shadow: 0 4px 16px rgba(255, 0, 0, 0.45);
+    transition: transform 0.22s ease, background-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.play-btn-circle svg {
+    margin-left: 3px; /* subtle optical alignment for play triangle */
 }
 
 .video-card:hover .play-btn-circle {
-    transform: scale(1.12);
-    background: #1b65b8;
+    transform: scale(1.15);
+    background-color: #cc0000;
+    box-shadow: 0 6px 22px rgba(255, 0, 0, 0.65);
 }
 
 /* When card is replaced by iframe */
