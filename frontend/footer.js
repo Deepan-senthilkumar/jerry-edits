@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="index.html#section-0">Home</a>
                         <a href="index.html#section-1">About Me</a>
                         <a href="index.html#section-2">Top Videos</a>
-                        <a href="index1.html">Channel Insights</a>
-                        <a href="index2.html">All Videos</a>
+                        <a href="insights.html">Channel Insights</a>
+                        <a href="videos.html">All Videos</a>
                     </div>
                     <div class="footer-box footer-box-work">
                         <h4>Me & My Work</h4>
