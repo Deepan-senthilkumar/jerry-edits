@@ -3,15 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jerry-Edits - All Videos</title>
+    <title>All Videos & Tamil WhatsApp Status Clips | Jerry Edits (@jerryedits4)</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="All Videos & Tamil WhatsApp Status Clips | Jerry Edits (@jerryedits4)">
+    <meta name="description" content="Browse all Tamil WhatsApp status videos by Jerry Edits. Watch romantic love songs, emotional friendship clips, mass attitude status, and trending BGM edits.">
+    <meta name="keywords" content="Jerry Edits all videos, tamil whatsapp status download, jerryedits4 videos, romantic status video, friendship status, mass status tamil, 30s status">
+    <meta name="author" content="Jerry Edits - Deepan S">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://jerry-edits.vercel.app/videos.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="video.other">
+    <meta property="og:url" content="https://jerry-edits.vercel.app/videos.html">
+    <meta property="og:title" content="All Videos & Tamil WhatsApp Status Clips | Jerry Edits">
+    <meta property="og:description" content="Browse all Tamil WhatsApp status videos by Jerry Edits. Watch romantic love songs, emotional friendship clips, and trending BGM edits.">
+    <meta property="og:image" content="https://jerry-edits.vercel.app/images/logo.jpg">
+    <meta property="og:site_name" content="Jerry Edits">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://jerry-edits.vercel.app/videos.html">
+    <meta name="twitter:title" content="All Videos & Tamil WhatsApp Status Clips | Jerry Edits">
+    <meta name="twitter:description" content="Browse all Tamil WhatsApp status videos by Jerry Edits. Watch romantic love songs, emotional friendship clips, and trending BGM edits.">
+    <meta name="twitter:image" content="https://jerry-edits.vercel.app/images/logo.jpg">
+
+    <!-- Favicons -->
     <link rel="icon" type="image/jpeg" href="images/logo.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="images/logo.jpg">
     <link rel="apple-touch-icon" href="images/logo.jpg">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/videos.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.css'
         integrity='sha512-GmZYQ9SKTnOea030Tbiat0Y+jhnYLIpsGAe6QTnToi8hI2nNbVMETHeK4wm4MuYMQdrc38x+sX77+kVD01eNsQ=='
         crossorigin='anonymous' />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Jerry Edits - All Tamil WhatsApp Status Videos",
+      "url": "https://jerry-edits.vercel.app/videos.html",
+      "description": "Comprehensive collection of 30-second Tamil WhatsApp status videos, love BGM, and friendship video edits.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Jerry Edits",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://jerry-edits.vercel.app/images/logo.jpg"
+        }
+      }
+    }
+    </script>
 </head>
 <body>
     <div id="header-placeholder"></div>
@@ -32,11 +78,11 @@
 
     <section class="page-title-section">
         <span>Collection</span>
-        <h2>All Videos</h2>
+        <h1>All Videos</h1>
     </section>
 
     <!-- Loading Message -->
-    <div id="loading" style="text-align:center; padding: 40px; font-size: 18px;">
+    <div id="loading" style="text-align:center; padding: 30px; font-size: 18px;">
         Loading videos...
     </div>
 
@@ -52,6 +98,7 @@
 
     <div id="footer-placeholder"></div>
     <script src="js/config.js"></script>
+    <script src="js/fallbackVideos.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/footer.js"></script>
 
@@ -70,11 +117,9 @@
             `;
         }
 
-        let allVideos = [];   // all videos from the API
+        let allVideos = [];   // all videos from the API or cache
         let shownCount = 0;   // how many are currently rendered
 
-        // Returns per-batch limit based on current screen width
-        // Desktop (>1024px): 21 | Tablet (601–1024px): 20 | Mobile (≤600px): 10
         function getLimit() {
             if (window.innerWidth <= 600) return 10;
             if (window.innerWidth <= 1024) return 20;
@@ -94,7 +139,7 @@
             card.innerHTML = `
                 <div class="video-thumb-wrap">
                     <img
-                        src="https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg"
+                        src="${video.thumbnail || `https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg`}"
                         alt="${video.title}"
                         loading="lazy">
                     <div class="play-btn-overlay">
@@ -112,6 +157,9 @@
         }
 
         function renderBatch() {
+            const loading = document.getElementById('loading');
+            if (loading) loading.style.display = 'none';
+
             const section = document.getElementById('videos-section');
             const limit = getLimit();
             const batch = allVideos.slice(shownCount, shownCount + limit);
@@ -122,7 +170,6 @@
 
             shownCount += batch.length;
 
-            // Show or hide the "Load More" button
             const btn = document.getElementById('load-more-btn');
             if (shownCount >= allVideos.length) {
                 btn.style.display = 'none';
@@ -131,17 +178,44 @@
             }
         }
 
+        // STEP 1: Instant render from localStorage or fallback
+        const cached = localStorage.getItem('jerry_videos_cache');
+        if (cached) {
+            try {
+                const parsed = JSON.parse(cached);
+                if (Array.isArray(parsed) && parsed.length) {
+                    allVideos = parsed;
+                    renderBatch();
+                }
+            } catch (e) {}
+        }
+
+        // Fallback if localStorage was empty (0ms latency!)
+        if (allVideos.length === 0 && typeof FALLBACK_VIDEOS !== 'undefined' && FALLBACK_VIDEOS.length) {
+            allVideos = FALLBACK_VIDEOS;
+            renderBatch();
+        }
+
+        // STEP 2: Background revalidation from Render API
         fetch(`${CONFIG.API_BASE_URL}/api/videos/by-views`)
             .then(res => res.json())
             .then(data => {
-                document.getElementById('loading').style.display = 'none';
-                allVideos = data.data;
-                renderBatch(); // show first batch
+                if (data && data.data && data.data.length) {
+                    const isFirstRender = (allVideos.length === 0);
+                    allVideos = data.data;
+                    localStorage.setItem('jerry_videos_cache', JSON.stringify(data.data));
+
+                    if (isFirstRender) {
+                        renderBatch();
+                    }
+                }
             })
             .catch(err => {
-                console.error('Videos error:', err);
-                document.getElementById('loading').innerText =
-                    'Failed to load videos. Please try again later.';
+                console.warn('Backend fetch delayed/failed:', err);
+                if (allVideos.length === 0) {
+                    document.getElementById('loading').innerText =
+                        'Failed to load videos from server. Please refresh or visit @jerryedits4 on YouTube.';
+                }
             });
     </script>
 </body>
