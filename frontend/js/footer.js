@@ -36,23 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
 
-                <!-- SEO Keywords Row for Google Crawling -->
-                <div class="footer-seo-tags" style="margin: 30px auto 10px auto; max-width: 1200px; padding: 20px 15px 0 15px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center;">
-                    <p style="color: #94a3b8; font-size: 12.5px; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.8px; text-transform: uppercase;">
-                        🔥 Trending Search Keywords:
-                    </p>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
-                        <a href="videos.html" style="background: rgba(255,255,255,0.07); color: #cbd5e1; font-size: 12px; padding: 6px 14px; border-radius: 20px; text-decoration: none; border: 1px solid rgba(255,255,255,0.08);">Jerry Edits</a>
-                        <a href="videos.html" style="background: rgba(255,255,255,0.07); color: #cbd5e1; font-size: 12px; padding: 6px 14px; border-radius: 20px; text-decoration: none; border: 1px solid rgba(255,255,255,0.08);">Tamil WhatsApp Status</a>
-                        <a href="videos.html" style="background: rgba(255,255,255,0.07); color: #cbd5e1; font-size: 12px; padding: 6px 14px; border-radius: 20px; text-decoration: none; border: 1px solid rgba(255,255,255,0.08);">Tamil Love Status</a>
-                        <a href="videos.html" style="background: rgba(255,255,255,0.07); color: #cbd5e1; font-size: 12px; padding: 6px 14px; border-radius: 20px; text-decoration: none; border: 1px solid rgba(255,255,255,0.08);">30s BGM Status</a>
-                        <a href="videos.html" style="background: rgba(255,255,255,0.07); color: #cbd5e1; font-size: 12px; padding: 6px 14px; border-radius: 20px; text-decoration: none; border: 1px solid rgba(255,255,255,0.08);">Tamil Friendship Status</a>
-                        <a href="videos.html" style="background: rgba(255,255,255,0.07); color: #cbd5e1; font-size: 12px; padding: 6px 14px; border-radius: 20px; text-decoration: none; border: 1px solid rgba(255,255,255,0.08);">Mass & Attitude Status</a>
-                        <a href="videos.html" style="background: rgba(255,255,255,0.07); color: #cbd5e1; font-size: 12px; padding: 6px 14px; border-radius: 20px; text-decoration: none; border: 1px solid rgba(255,255,255,0.08);">@jerryedits4 YouTube</a>
-                        <a href="videos.html" style="background: rgba(255,255,255,0.07); color: #cbd5e1; font-size: 12px; padding: 6px 14px; border-radius: 20px; text-decoration: none; border: 1px solid rgba(255,255,255,0.08);">Tamil Status Video Download</a>
-                    </div>
-                </div>
-
                 <div class="copyright-text">
                     <p>Copyright &copy; 2024 All rights reserved | Jerry-Edits</p>
                     <p class="developer-credit">Designed and Developed by <a href="https://portfolio-deepan.vercel.app/" target="_blank" rel="noopener noreferrer">Deepan S</a></p>
