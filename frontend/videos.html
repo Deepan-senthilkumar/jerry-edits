@@ -79,7 +79,17 @@
     <section class="page-title-section">
         <span>Collection</span>
         <h1>All Videos</h1>
+        <p style="color: #64748b; font-size: 14.5px; margin-top: 6px;">Watch & enjoy high-definition 30-second Tamil WhatsApp status edits</p>
     </section>
+
+    <!-- SEO Category Filter Pills -->
+    <div class="filter-pills-wrap">
+        <button class="filter-pill active" onclick="filterCategory('all', this)"><i class="fa-solid fa-layer-group"></i> All Status</button>
+        <button class="filter-pill" onclick="filterCategory('love', this)"><i class="fa-solid fa-heart" style="color: #e11d48;"></i> Tamil Love Status</button>
+        <button class="filter-pill" onclick="filterCategory('friendship', this)"><i class="fa-solid fa-user-group" style="color: #059669;"></i> Friendship Status</button>
+        <button class="filter-pill" onclick="filterCategory('bgm', this)"><i class="fa-solid fa-music" style="color: #2563eb;"></i> Trending BGM</button>
+        <button class="filter-pill" onclick="filterCategory('mass', this)"><i class="fa-solid fa-fire" style="color: #d97706;"></i> Mass & Attitude</button>
+    </div>
 
     <!-- Modern Animated Loader -->
     <div id="loading" class="video-loader-wrapper">
@@ -118,8 +128,33 @@
             `;
         }
 
-        let allVideos = [];   // all videos from the API or cache
-        let shownCount = 0;   // how many are currently rendered
+        let allVideos = [];       // all videos from the API or cache
+        let shownCount = 0;       // how many are currently rendered
+        let currentFilter = 'all'; // active category filter
+
+        function filterCategory(category, btn) {
+            currentFilter = category;
+            document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+
+            const section = document.getElementById('videos-section');
+            section.innerHTML = '';
+            shownCount = 0;
+            renderBatch();
+        }
+
+        function getFilteredVideos() {
+            if (currentFilter === 'all') return allVideos;
+            const cat = currentFilter.toLowerCase();
+            return allVideos.filter(v => {
+                const title = (v.title || '').toLowerCase();
+                if (cat === 'love') return title.includes('love') || title.includes('kadhal') || title.includes('kadhale') || title.includes('uyire') || title.includes('romantic') || title.includes('neeyadi') || title.includes('mazhai');
+                if (cat === 'friendship') return title.includes('friend') || title.includes('natpu') || title.includes('othayilae') || title.includes('dhanush');
+                if (cat === 'bgm') return title.includes('bgm') || title.includes('song') || title.includes('massup') || title.includes('mix') || title.includes('tune');
+                if (cat === 'mass') return title.includes('mass') || title.includes('attitude') || title.includes('vijay') || title.includes('ajith') || title.includes('dhanush') || title.includes('thunivu');
+                return true;
+            });
+        }
 
         function getLimit() {
             if (window.innerWidth <= 600) return 10;
@@ -163,7 +198,8 @@
 
             const section = document.getElementById('videos-section');
             const limit = getLimit();
-            const batch = allVideos.slice(shownCount, shownCount + limit);
+            const filtered = getFilteredVideos();
+            const batch = filtered.slice(shownCount, shownCount + limit);
 
             batch.forEach(video => {
                 section.appendChild(createCard(video));
@@ -172,7 +208,7 @@
             shownCount += batch.length;
 
             const btn = document.getElementById('load-more-btn');
-            if (shownCount >= allVideos.length) {
+            if (shownCount >= filtered.length) {
                 btn.style.display = 'none';
             } else {
                 btn.style.display = 'block';
