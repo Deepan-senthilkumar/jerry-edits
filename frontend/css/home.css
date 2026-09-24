@@ -863,4 +863,118 @@ main {
 @keyframes shimmerEffect {
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
-}
+}
+
+/* =======================================
+   SEO Keywords & Category Badges Section
+======================================= */
+.seo-keywords-section {
+    max-width: 1200px;
+    margin: 50px auto 40px auto;
+    padding: 40px 25px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+}
+
+.seo-keywords-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.seo-keywords-header span {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #2b86d9;
+    font-weight: 700;
+}
+
+.seo-keywords-header h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1e293b;
+    margin-top: 8px;
+}
+
+.seo-tags-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.seo-tag-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: #f1f5f9;
+    color: #1e293b;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.seo-tag-pill:hover {
+    background: #2b86d9;
+    color: #ffffff;
+    border-color: #2b86d9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(43, 134, 217, 0.25);
+}
+
+.seo-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.seo-feature-card {
+    background: #f8fafc;
+    border: 1px solid #edf2f7;
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.seo-feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.seo-feature-card i {
+    font-size: 28px;
+    color: #2b86d9;
+    margin-bottom: 12px;
+}
+
+.seo-feature-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.seo-feature-card p {
+    font-size: 13.5px;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .seo-features-grid {
+        grid-template-columns: 1fr;
+    }
+    .seo-keywords-header h2 {
+        font-size: 22px;
+    }
+}
+
