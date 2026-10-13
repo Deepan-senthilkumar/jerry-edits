@@ -121,8 +121,19 @@ nav a:hover {
 }
 
 nav a.active-nav {
-    color: #ff785d;
+    color: #ff785d !important;
     position: relative;
+}
+
+nav a.active-nav::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 2.5px;
+    background-color: #ff785d;
+    border-radius: 2px;
 }
 
 /* Page Section Title (for subpages like Videos & Insights) */

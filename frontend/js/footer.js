@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="footer-box footer-box-3">
                         <h4>Contact Us</h4>
                         <div class="footer-contact-info">
-                            <p class="footer-contact-item"><i class="fa-solid fa-phone"></i> +91 7639432800</p>
+                            <p class="footer-contact-item"><i class="fa-solid fa-phone"></i> +91 7639432868</p>
                             <p class="footer-contact-item"><i class="fa fa-envelope"></i> deepansenthil098@gmail.com</p>
                         </div>
                         <div class="icon-div" style="margin-top: 15px;">

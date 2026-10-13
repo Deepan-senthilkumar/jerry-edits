@@ -1,27 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
     const headerPlaceholder = document.getElementById('header-placeholder');
     if (headerPlaceholder) {
+        // Robust current page detection (handles /, /about, /about.html, file:///, clean URLs)
         const path = window.location.pathname.toLowerCase();
-        const isInsights = path.includes('insights.html');
-        const isVideos = path.includes('videos.html');
-        const isAbout = path.includes('about.html');
-        const isContact = path.includes('contact.html');
-        const isLegal = path.includes('privacy-policy.html') || path.includes('terms.html') || path.includes('disclaimer.html');
-        const isHome = !isInsights && !isVideos && !isAbout && !isContact && !isLegal;
+        const cleanSegment = path.split('/').filter(Boolean).pop() || 'index';
+        const pageName = cleanSegment.replace('.html', '');
+
+        const isAbout = pageName === 'about';
+        const isVideos = pageName === 'videos';
+        const isInsights = pageName === 'insights';
+        const isContact = pageName === 'contact';
+        const isLegal = pageName === 'privacy-policy' || pageName === 'terms' || pageName === 'disclaimer';
+        const isHome = (pageName === 'index' || pageName === '' || path === '/') && !isAbout && !isVideos && !isInsights && !isContact && !isLegal;
 
         headerPlaceholder.innerHTML = `
             <section class="section-0" id="section-0">
                 <div class="top-bar">
                     <div class="nav-item">
                         <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"
-                            style="color: black;" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/Deepan-senthilkumar" style="color: black;" aria-label="GitHub"><i
+                            style="color: black;" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Deepan-senthilkumar" style="color: black;" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i
                                 class="fa-brands fa-github"></i></a>
-                        <a href="https://www.youtube.com/@jerryedits4" style="color: black;" aria-label="YouTube"><i
+                        <a href="https://www.youtube.com/@jerryedits4" style="color: black;" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i
                                 class="fa-brands fa-youtube"></i></a>
-                        <a href="https://www.instagram.com/jerry_edits_offical/" style="color: black;" aria-label="Instagram"><i
+                        <a href="https://www.instagram.com/jerry_edits_offical/" style="color: black;" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i
                                 class="fa-brands fa-instagram"></i></a>
-                        <a href="https://telegram.me/JerryEditz18" style="color: black;" aria-label="Telegram"><i
+                        <a href="https://telegram.me/JerryEditz18" style="color: black;" aria-label="Telegram" target="_blank" rel="noopener noreferrer"><i
                                 class="fa-brands fa-telegram"></i></a>
                     </div>
                     <div class="logo">
