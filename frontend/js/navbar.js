@@ -4,21 +4,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const path = window.location.pathname.toLowerCase();
         const isInsights = path.includes('insights.html');
         const isVideos = path.includes('videos.html');
-        const isHome = !isInsights && !isVideos;
+        const isAbout = path.includes('about.html');
+        const isContact = path.includes('contact.html');
+        const isLegal = path.includes('privacy-policy.html') || path.includes('terms.html') || path.includes('disclaimer.html');
+        const isHome = !isInsights && !isVideos && !isAbout && !isContact && !isLegal;
 
         headerPlaceholder.innerHTML = `
             <section class="section-0" id="section-0">
                 <div class="top-bar">
                     <div class="nav-item">
                         <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"
-                            style="color: black;"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/Deepan-senthilkumar" style="color: black;"><i
+                            style="color: black;" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Deepan-senthilkumar" style="color: black;" aria-label="GitHub"><i
                                 class="fa-brands fa-github"></i></a>
-                        <a href="https://www.youtube.com/@jerryedits4" style="color: black;"><i
+                        <a href="https://www.youtube.com/@jerryedits4" style="color: black;" aria-label="YouTube"><i
                                 class="fa-brands fa-youtube"></i></a>
-                        <a href="https://www.instagram.com/jerry_edits_offical/" style="color: black;"><i
+                        <a href="https://www.instagram.com/jerry_edits_offical/" style="color: black;" aria-label="Instagram"><i
                                 class="fa-brands fa-instagram"></i></a>
-                        <a href="https://telegram.me/JerryEditz18" style="color: black;"><i
+                        <a href="https://telegram.me/JerryEditz18" style="color: black;" aria-label="Telegram"><i
                                 class="fa-brands fa-telegram"></i></a>
                     </div>
                     <div class="logo">
@@ -42,12 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     </button>
                 </div>
                 <div class="nav-menu" id="nav-menu">
-                    <a href="index.html#section-0" class="${isHome ? 'active-nav' : ''}">Home</a>
-                    <a href="index.html#section-1">About</a>
-                    <a href="index.html#section-2">Top Videos</a>
-                    <a href="insights.html" class="${isInsights ? 'active-nav' : ''}">Insights</a>
+                    <a href="index.html" class="${isHome ? 'active-nav' : ''}">Home</a>
+                    <a href="about.html" class="${isAbout ? 'active-nav' : ''}">About</a>
                     <a href="videos.html" class="${isVideos ? 'active-nav' : ''}">Videos</a>
-                    <a href="#footer">Contact</a>
+                    <a href="insights.html" class="${isInsights ? 'active-nav' : ''}">Insights</a>
+                    <a href="contact.html" class="${isContact ? 'active-nav' : ''}">Contact</a>
                 </div>
             </nav>
         `;

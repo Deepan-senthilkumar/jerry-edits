@@ -6,20 +6,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="footer-content">
                     <div class="footer-box footer-box-1">
                         <h4>About Jerry Edits</h4>
-                        <p style="color: #bbb; line-height: 1.6; font-size: 14px;">Jerry Edits is a premium Tamil WhatsApp status channel dedicated to crafting romantic, emotional, and friendship status videos. We create heartfelt content designed to connect with emotions, vibe with music, and tell a story 30 seconds at a time.</p>
+                        <p style="color: #bbb; line-height: 1.6; font-size: 14px;">Jerry Edits is an official Tamil WhatsApp status and EFX video editing showcase created by Deepan S. Since August 2020, we have published 89+ curated video edits accumulating over 285,000 views across YouTube and social platforms.</p>
                     </div>
                     <div class="footer-box footer-box-2">
                         <h4>Quick Links</h4>
-                        <a href="index.html#section-0">Home</a>
-                        <a href="index.html#section-1">About Me</a>
-                        <a href="index.html#section-2">Top Videos</a>
-                        <a href="insights.html">Channel Insights</a>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Jerry Edits</a>
                         <a href="videos.html">All Videos</a>
+                        <a href="insights.html">Channel Insights</a>
+                        <a href="contact.html">Contact Us</a>
                     </div>
                     <div class="footer-box footer-box-work">
-                        <h4>Me & My Work</h4>
-                        <a href="https://portfolio-deepan.vercel.app/" target="_blank" rel="noopener noreferrer">My Portfolio</a>
-                        <a href="https://jerry-edits.vercel.app/" target="_blank" rel="noopener noreferrer">Jerry Edits</a>
+                        <h4>Legal & Policies</h4>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms & Conditions</a>
+                        <a href="disclaimer.html">Copyright & Disclaimer</a>
+                        <a href="https://portfolio-deepan.vercel.app/" target="_blank" rel="noopener noreferrer">Creator Portfolio</a>
                     </div>
                     <div class="footer-box footer-box-3">
                         <h4>Contact Us</h4>
@@ -28,17 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p class="footer-contact-item"><i class="fa fa-envelope"></i> deepansenthil098@gmail.com</p>
                         </div>
                         <div class="icon-div" style="margin-top: 15px;">
-                            <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://github.com/Deepan-senthilkumar" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://www.youtube.com/@jerryedits4" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                            <a href="https://www.instagram.com/jerry_edits_offical/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/Deepan-senthilkumar" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.youtube.com/@jerryedits4" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/jerry_edits_offical/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://telegram.me/JerryEditz18" aria-label="Telegram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="copyright-text">
-                    <p>Copyright &copy; 2024 All rights reserved | Jerry-Edits</p>
-                    <p class="developer-credit">Designed and Developed by <a href="https://portfolio-deepan.vercel.app/" target="_blank" rel="noopener noreferrer">Deepan S</a></p>
+                    <p>Copyright &copy; 2020-2026 All rights reserved | Jerry Edits Official (@jerryedits4)</p>
+                    <p class="developer-credit">Created and Curated by <a href="https://portfolio-deepan.vercel.app/" target="_blank" rel="noopener noreferrer">Deepan S</a></p>
                 </div>
             </footer>
         `;
