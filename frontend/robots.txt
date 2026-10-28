@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+# Google Search Crawler
+User-agent: Googlebot
+Allow: /
+
+# Google AdSense Crawler
+User-agent: Mediapartners-Google
+Allow: /
+
 Sitemap: https://jerry-edits.vercel.app/sitemap.xml
+
