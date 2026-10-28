@@ -108,7 +108,56 @@
     </div>
 
     <!-- Videos Grid -->
-    <section id="videos-section" class="videos-grid"></section>
+    <section id="videos-section" class="videos-grid">
+        <div class="video-card" onclick="loadVideo(this, 'rjQmx2csSoM')">
+            <div class="video-thumb-wrap">
+                <img src="https://i.ytimg.com/vi/rjQmx2csSoM/mqdefault.jpg" alt="kadhal kan kattudhe Love song full screen whatsapp status" loading="lazy">
+                <div class="play-btn-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M8 5v14l11-7z"/></svg></div></div>
+            </div>
+            <p class="video-title">kadhal kan kattudhe🌹 Love song 💞 full screen whatsapp status ❤️</p>
+            <p class="video-views">👁️ 39.3k views</p>
+        </div>
+        <div class="video-card" onclick="loadVideo(this, '9xndQKn88Hs')">
+            <div class="video-thumb-wrap">
+                <img src="https://i.ytimg.com/vi/9xndQKn88Hs/mqdefault.jpg" alt="othayilae ulagam song tamil whatsapp status" loading="lazy">
+                <div class="play-btn-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M8 5v14l11-7z"/></svg></div></div>
+            </div>
+            <p class="video-title">othayilae ulagam song👥tamil 💙 whatsapp status 🤙#friendship #tamilstatus</p>
+            <p class="video-views">👁️ 32.5k views</p>
+        </div>
+        <div class="video-card" onclick="loadVideo(this, 'fDMSl6u5V34')">
+            <div class="video-thumb-wrap">
+                <img src="https://i.ytimg.com/vi/fDMSl6u5V34/mqdefault.jpg" alt="engeyum neeyadi whatsapp status tamil" loading="lazy">
+                <div class="play-btn-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M8 5v14l11-7z"/></svg></div></div>
+            </div>
+            <p class="video-title">engeyum neeyadi 💌whatsapp status🥰tamil</p>
+            <p class="video-views">👁️ 28.9k views</p>
+        </div>
+        <div class="video-card" onclick="loadVideo(this, '0kgMFqMNP1Q')">
+            <div class="video-thumb-wrap">
+                <img src="https://i.ytimg.com/vi/0kgMFqMNP1Q/mqdefault.jpg" alt="Thunivu chilla chilla song Vijay mix tamil whatsapp status" loading="lazy">
+                <div class="play-btn-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M8 5v14l11-7z"/></svg></div></div>
+            </div>
+            <p class="video-title">Thunivu-chilla chilla song ☮️ Vijay mix tamil whatsapp status 🤙✨</p>
+            <p class="video-views">👁️ 23.4k views</p>
+        </div>
+        <div class="video-card" onclick="loadVideo(this, 'UTij5ULjgXA')">
+            <div class="video-thumb-wrap">
+                <img src="https://i.ytimg.com/vi/UTij5ULjgXA/mqdefault.jpg" alt="kadhale kadhale x Milne hai mujhse love mix tamil whatsapp status" loading="lazy">
+                <div class="play-btn-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M8 5v14l11-7z"/></svg></div></div>
+            </div>
+            <p class="video-title">kadhale kadhale × Milne hai mujhse 💌 love mix💟tamil whatsapp status</p>
+            <p class="video-views">👁️ 21.1k views</p>
+        </div>
+        <div class="video-card" onclick="loadVideo(this, 'mXO0SkBov1w')">
+            <div class="video-thumb-wrap">
+                <img src="https://i.ytimg.com/vi/mXO0SkBov1w/mqdefault.jpg" alt="Ippadi mazhai vishal movie whatsapp status" loading="lazy">
+                <div class="play-btn-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M8 5v14l11-7z"/></svg></div></div>
+            </div>
+            <p class="video-title">Ippadi mazhai 🌹vishal movie 🎵 whatsapp status</p>
+            <p class="video-views">👁️ 18.2k views</p>
+        </div>
+    </section>
 
     <!-- Load More Button -->
     <div class="load-more-wrapper">
@@ -209,6 +258,9 @@
             if (loading) loading.style.display = 'none';
 
             const section = document.getElementById('videos-section');
+            if (shownCount === 0) {
+                section.innerHTML = '';
+            }
             const limit = getLimit();
             const filtered = getFilteredVideos();
             const batch = filtered.slice(shownCount, shownCount + limit);
