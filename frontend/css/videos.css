@@ -277,7 +277,7 @@ body {
 
 .footer-box-2 a:hover,
 .footer-box-work a:hover {
-    color: #c8320e;
+    color: #ff8b70;
 }
 
 .footer-box .icon-div {
@@ -352,7 +352,7 @@ body {
 }
 
 .developer-credit a {
-    color: #c8320e;
+    color: #ff8b70;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s, text-decoration 0.3s;
