@@ -277,7 +277,7 @@ body {
 
 .footer-box-2 a:hover,
 .footer-box-work a:hover {
-    color: #ff785d;
+    color: #c8320e;
 }
 
 .footer-box .icon-div {
@@ -292,7 +292,7 @@ body {
 
 .footer-box .icon-div i {
     padding: 12px;
-    background-color: #95ADBE;
+    background-color: #2d3e50;
     color: #fff;
     border-radius: 100%;
     cursor: pointer;
@@ -305,7 +305,7 @@ body {
 }
 
 .footer-box .icon-div i:hover {
-    background-color: #ff785d;
+    background-color: #c8320e;
     transform: translateY(-3px);
 }
 
@@ -323,7 +323,7 @@ body {
 }
 
 .footer-contact-item i {
-    color: #95ADBE;
+    color: #2d3e50;
     font-size: 16px;
     width: 20px;
     text-align: center;
@@ -352,7 +352,7 @@ body {
 }
 
 .developer-credit a {
-    color: #ff785d;
+    color: #c8320e;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s, text-decoration 0.3s;

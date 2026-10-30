@@ -27,7 +27,7 @@
 }
 
 .top-bar .nav-item a:hover {
-    color: #ff785d;
+    color: #c8320e;
 }
 
 .top-bar .logo {
@@ -117,11 +117,11 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff785d;
+    color: #c8320e;
 }
 
 nav a.active-nav {
-    color: #ff785d !important;
+    color: #c8320e !important;
     position: relative;
 }
 
@@ -132,7 +132,7 @@ nav a.active-nav::after {
     left: 0;
     right: 0;
     height: 2.5px;
-    background-color: #ff785d;
+    background-color: #c8320e;
     border-radius: 2px;
 }
 
@@ -143,7 +143,7 @@ nav a.active-nav::after {
 }
 
 .page-title-section span {
-    color: #ff785d;
+    color: #c8320e;
     letter-spacing: 2px;
     font-weight: bold;
     text-transform: uppercase;

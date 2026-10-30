@@ -45,7 +45,7 @@ html {
 }
 
 .top-bar .nav-item a:hover {
-    color: #ff785d;
+    color: #c8320e;
 }
 
 .top-bar .logo {
@@ -131,7 +131,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff785d;
+    color: #c8320e;
 }
 
 /* Main */
@@ -174,7 +174,7 @@ main {
 }
 
 .section-1-content span {
-    color: #ff785d;
+    color: #c8320e;
     letter-spacing: 2px;
     font-weight: bold;
 }
@@ -202,13 +202,13 @@ main {
     color: #fff;
     font-size: 16px;
     cursor: pointer;
-    background-color: #95ADBE;
+    background-color: #2d3e50;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .section-1 .section-1-content button:hover,
 .section-1 .section-1-content a:hover button {
-    background-color: #ff785d;
+    background-color: #c8320e;
     transform: translateY(-2px);
 }
 
@@ -224,7 +224,7 @@ main {
 }
 
 .section-2 span {
-    color: #ff785D;
+    color: #c8320e;
     letter-spacing: 2px;
     font-weight: bold;
     text-transform: uppercase;
@@ -411,7 +411,7 @@ main {
 
 .footer-box-2 a:hover,
 .footer-box-work a:hover {
-    color: #ff785d;
+    color: #c8320e;
 }
 
 .footer-box .icon-div {
@@ -426,7 +426,7 @@ main {
 
 .footer-box .icon-div i {
     padding: 12px;
-    background-color: #95ADBE;
+    background-color: #2d3e50;
     color: #fff;
     border-radius: 100%;
     cursor: pointer;
@@ -439,7 +439,7 @@ main {
 }
 
 .footer-box .icon-div i:hover {
-    background-color: #ff785d;
+    background-color: #c8320e;
     transform: translateY(-3px);
 }
 
@@ -457,7 +457,7 @@ main {
 }
 
 .footer-contact-item i {
-    color: #95ADBE;
+    color: #2d3e50;
     font-size: 16px;
     width: 20px;
     text-align: center;
@@ -486,7 +486,7 @@ main {
 }
 
 .developer-credit a {
-    color: #ff785d;
+    color: #c8320e;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s, text-decoration 0.3s;
