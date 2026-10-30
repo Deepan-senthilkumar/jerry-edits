@@ -174,9 +174,11 @@ main {
 }
 
 .section-1-content span {
-    color: #c8320e;
+    color: #b91c1c;
     letter-spacing: 2px;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 15px;
+    display: inline-block;
 }
 
 .section-1-content h2 {
@@ -194,21 +196,21 @@ main {
 }
 
 .section-1 .section-1-content button {
-    padding: 15px 25px;
+    padding: 15px 28px;
     border: 0;
-    border-radius: 5px;
+    border-radius: 6px;
     font-family: inherit;
-    font-weight: bold;
-    color: #fff;
+    font-weight: 700;
+    color: #ffffff;
     font-size: 16px;
     cursor: pointer;
-    background-color: #2d3e50;
+    background-color: #1e293b;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .section-1 .section-1-content button:hover,
 .section-1 .section-1-content a:hover button {
-    background-color: #c8320e;
+    background-color: #b91c1c;
     transform: translateY(-2px);
 }
 
@@ -224,12 +226,14 @@ main {
 }
 
 .section-2 span {
-    color: #c8320e;
-    letter-spacing: 2px;
-    font-weight: bold;
+    color: #b91c1c;
+    letter-spacing: 2.5px;
+    font-weight: 800;
     text-transform: uppercase;
     padding: 10px;
     text-align: center;
+    font-size: 15px;
+    display: inline-block;
 }
 
 .section-2 h2 {
@@ -254,9 +258,10 @@ main {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 12px;
+    background-color: #ffffff;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -270,6 +275,16 @@ main {
     width: 100%;
     height: 200px;
     object-fit: cover;
+}
+
+.section-2 .videos-div .videos-content span {
+    color: #b91c1c;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 13px;
+    display: inline-block;
+    padding: 4px 0;
 }
 
 .section-2 .videos-div .videos-content {
@@ -697,9 +712,12 @@ main {
         flex: 1 1 auto;
     }
 
-    .section-1-content h2 {
-        font-size: 26px;
+    .section-1-content h1, .section-1-content h2 {
+        font-size: 26px !important;
+        line-height: 1.35 !important;
         margin-right: 0;
+        color: #1e293b;
+        font-weight: 800;
     }
 
     .section-1-content p {

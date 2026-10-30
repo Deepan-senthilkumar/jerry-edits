@@ -10,7 +10,7 @@
 }
 
 .page-title-section span {
-    color: #c8320e;
+    color: #b91c1c;
     letter-spacing: 2px;
     font-weight: bold;
     text-transform: uppercase;
@@ -88,7 +88,7 @@
     top: 4px;
     bottom: 4px;
     width: 4px;
-    background: #c8320e;
+    background: #b91c1c;
     border-radius: 2px;
 }
 
@@ -124,7 +124,7 @@
 /* Info Notice Box */
 .info-box {
     background: #fdf6f4;
-    border-left: 4px solid #c8320e;
+    border-left: 4px solid #b91c1c;
     padding: 18px 24px;
     border-radius: 0 10px 10px 0;
     margin: 25px 0;
@@ -175,7 +175,7 @@
 .about-stat-card .stat-val {
     font-size: 2.3rem;
     font-weight: 700;
-    color: #c8320e;
+    color: #b91c1c;
     margin-bottom: 6px;
 }
 
@@ -212,7 +212,7 @@
 }
 
 .process-step-num {
-    background: #c8320e;
+    background: #b91c1c;
     color: #fff;
     width: 36px;
     height: 36px;
@@ -273,7 +273,7 @@
 }
 
 .contact-box-card h3 i {
-    color: #c8320e;
+    color: #b91c1c;
 }
 
 .contact-row-item {
@@ -293,7 +293,7 @@
     height: 44px;
     border-radius: 50%;
     background: #fff3f0;
-    color: #c8320e;
+    color: #b91c1c;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -318,7 +318,7 @@
 }
 
 .contact-row-text a:hover {
-    color: #c8320e;
+    color: #b91c1c;
 }
 
 /* Social Channel Pill Buttons in Contact */
