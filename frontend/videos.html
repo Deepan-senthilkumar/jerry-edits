@@ -70,7 +70,48 @@
     </script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
+    <section class="section-0" id="section-0">
+        <div class="top-bar">
+            <div class="nav-item">
+                <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"
+                    style="color: black;" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Deepan-senthilkumar" style="color: black;" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.youtube.com/@jerryedits4" style="color: black;" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.instagram.com/jerry_edits_offical/" style="color: black;" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://telegram.me/JerryEditz18" style="color: black;" aria-label="Telegram" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-telegram"></i></a>
+            </div>
+            <div class="logo">
+                <h1>🎬 Jerry Edits</h1>
+                <h3>Feel the love, vibe the emotion – 30 seconds at a time.</h3>
+            </div>
+            <div class="logo-img-wrapper">
+                <img src="images/logo.jpg" alt="Jerry-Edits" class="top-bar-logo">
+            </div>
+        </div>
+    </section>
+
+    <nav class="nav-sticky">
+        <div class="nav-header">
+            <div class="nav-brand-wrapper">
+                <img src="images/logo.jpg" alt="Jerry-Edits" class="nav-logo">
+                <span class="nav-brand">Jerry Edits</span>
+            </div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="videos.html" class="active-nav">Videos</a>
+            <a href="insights.html">Insights</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
 
     <section class="section-4" id="section-4">
         <div>
@@ -108,7 +149,56 @@
     </div>
 
     <!-- Videos Grid -->
-    <section id="videos-section" class="videos-grid"></section>
+    <section id="videos-section" class="videos-grid">
+        <div class="video-card" onclick="loadVideo(this, 'rjQmx2csSoM')">
+            <div class="video-thumb-wrap">
+                <img src="https://i.ytimg.com/vi/rjQmx2csSoM/mqdefault.jpg" alt="kadhal kan kattudhe Love song full screen whatsapp status" loading="lazy">
+                <div class="play-btn-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M8 5v14l11-7z"/></svg></div></div>
+            </div>
+            <p class="video-title">kadhal kan kattudhe🌹 Love song 💞 full screen whatsapp status ❤️</p>
+            <p class="video-views">👁️ 39.3k views</p>
+        </div>
+        <div class="video-card" onclick="loadVideo(this, '9xndQKn88Hs')">
+            <div class="video-thumb-wrap">
+                <img src="https://i.ytimg.com/vi/9xndQKn88Hs/mqdefault.jpg" alt="othayilae ulagam song tamil whatsapp status" loading="lazy">
+                <div class="play-btn-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M8 5v14l11-7z"/></svg></div></div>
+            </div>
+            <p class="video-title">othayilae ulagam song👥tamil 💙 whatsapp status 🤙#friendship #tamilstatus</p>
+            <p class="video-views">👁️ 32.5k views</p>
+        </div>
+        <div class="video-card" onclick="loadVideo(this, 'fDMSl6u5V34')">
+            <div class="video-thumb-wrap">
+                <img src="https://i.ytimg.com/vi/fDMSl6u5V34/mqdefault.jpg" alt="engeyum neeyadi whatsapp status tamil" loading="lazy">
+                <div class="play-btn-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M8 5v14l11-7z"/></svg></div></div>
+            </div>
+            <p class="video-title">engeyum neeyadi 💌whatsapp status🥰tamil</p>
+            <p class="video-views">👁️ 28.9k views</p>
+        </div>
+        <div class="video-card" onclick="loadVideo(this, '0kgMFqMNP1Q')">
+            <div class="video-thumb-wrap">
+                <img src="https://i.ytimg.com/vi/0kgMFqMNP1Q/mqdefault.jpg" alt="Thunivu chilla chilla song Vijay mix tamil whatsapp status" loading="lazy">
+                <div class="play-btn-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M8 5v14l11-7z"/></svg></div></div>
+            </div>
+            <p class="video-title">Thunivu-chilla chilla song ☮️ Vijay mix tamil whatsapp status 🤙✨</p>
+            <p class="video-views">👁️ 23.4k views</p>
+        </div>
+        <div class="video-card" onclick="loadVideo(this, 'UTij5ULjgXA')">
+            <div class="video-thumb-wrap">
+                <img src="https://i.ytimg.com/vi/UTij5ULjgXA/mqdefault.jpg" alt="kadhale kadhale x Milne hai mujhse love mix tamil whatsapp status" loading="lazy">
+                <div class="play-btn-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M8 5v14l11-7z"/></svg></div></div>
+            </div>
+            <p class="video-title">kadhale kadhale × Milne hai mujhse 💌 love mix💟tamil whatsapp status</p>
+            <p class="video-views">👁️ 21.1k views</p>
+        </div>
+        <div class="video-card" onclick="loadVideo(this, 'mXO0SkBov1w')">
+            <div class="video-thumb-wrap">
+                <img src="https://i.ytimg.com/vi/mXO0SkBov1w/mqdefault.jpg" alt="Ippadi mazhai vishal movie whatsapp status" loading="lazy">
+                <div class="play-btn-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M8 5v14l11-7z"/></svg></div></div>
+            </div>
+            <p class="video-title">Ippadi mazhai 🌹vishal movie 🎵 whatsapp status</p>
+            <p class="video-views">👁️ 18.2k views</p>
+        </div>
+    </section>
 
     <!-- Load More Button -->
     <div class="load-more-wrapper">
@@ -119,7 +209,48 @@
 
 
 
-    <div id="footer-placeholder"></div>
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-box footer-box-1">
+                <h4>About Jerry Edits</h4>
+                <p style="color: #bbb; line-height: 1.6; font-size: 14px;">Jerry Edits is an official Tamil WhatsApp status and EFX video editing showcase created by Deepan S. Since August 2020, we have published 89+ curated video edits accumulating over 285,000 views across YouTube and social platforms.</p>
+            </div>
+            <div class="footer-box footer-box-2">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Jerry Edits</a>
+                <a href="videos.html">All Videos</a>
+                <a href="insights.html">Channel Insights</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-box footer-box-work">
+                <h4>Legal & Policies</h4>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="disclaimer.html">Copyright & Disclaimer</a>
+                <a href="https://portfolio-deepan.vercel.app/" target="_blank" rel="noopener noreferrer">Creator Portfolio</a>
+            </div>
+            <div class="footer-box footer-box-3">
+                <h4>Contact Us</h4>
+                <div class="footer-contact-info">
+                    <p class="footer-contact-item"><i class="fa-solid fa-phone"></i> +91 7639432868</p>
+                    <p class="footer-contact-item"><i class="fa fa-envelope"></i> deepansenthil098@gmail.com</p>
+                </div>
+                <div class="icon-div" style="margin-top: 15px;">
+                    <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Deepan-senthilkumar" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.youtube.com/@jerryedits4" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/jerry_edits_offical/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://telegram.me/JerryEditz18" aria-label="Telegram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-text">
+            <p>Copyright &copy; 2020-2026 All rights reserved | Jerry Edits Official (@jerryedits4)</p>
+            <p class="developer-credit">Created and Curated by <a href="https://portfolio-deepan.vercel.app/" target="_blank" rel="noopener noreferrer">Deepan S</a></p>
+        </div>
+    </footer>
     <script src="js/config.js"></script>
     <script src="js/fallbackVideos.js"></script>
     <script src="js/navbar.js"></script>
@@ -209,6 +340,9 @@
             if (loading) loading.style.display = 'none';
 
             const section = document.getElementById('videos-section');
+            if (shownCount === 0) {
+                section.innerHTML = '';
+            }
             const limit = getLimit();
             const filtered = getFilteredVideos();
             const batch = filtered.slice(shownCount, shownCount + limit);
