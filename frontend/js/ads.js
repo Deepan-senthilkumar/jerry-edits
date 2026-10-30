@@ -21,3 +21,4 @@
     });
     setTimeout(loadAdSense, 7000);
 })();
+
