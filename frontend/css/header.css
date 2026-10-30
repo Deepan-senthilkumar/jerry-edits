@@ -40,7 +40,7 @@
     margin: 0;
 }
 
-.top-bar .logo h3 {
+.top-bar .logo h3, .top-bar .logo p.top-tagline {
     font-size: 14px;
     letter-spacing: 1px;
     color: #666;
@@ -250,7 +250,7 @@ nav a.active-nav::after {
         font-size: 24px !important;
     }
 
-    .top-bar .logo h3 {
+    .top-bar .logo h3, .top-bar .logo p.top-tagline {
         font-size: 13px !important;
         line-height: 1.4;
     }
