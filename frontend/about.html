@@ -19,11 +19,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
 
+    <!-- Resource Hints & Preconnects for Maximum PageSpeed -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/insights.css">
     <link rel="stylesheet" href="css/pages.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.css' crossorigin='anonymous' />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></noscript>
 </head>
 
 <body>
@@ -46,7 +53,7 @@
                 <h3>Feel the love, vibe the emotion – 30 seconds at a time.</h3>
             </div>
             <div class="logo-img-wrapper">
-                <img src="images/logo.jpg" alt="Jerry-Edits" class="top-bar-logo">
+                <img src="images/logo-sm.webp" onerror="this.onerror=null;this.src='images/logo-sm.jpg';" alt="Jerry-Edits" class="top-bar-logo" width="65" height="65">
             </div>
         </div>
     </section>
@@ -54,7 +61,7 @@
     <nav class="nav-sticky">
         <div class="nav-header">
             <div class="nav-brand-wrapper">
-                <img src="images/logo.jpg" alt="Jerry-Edits" class="nav-logo">
+                <img src="images/logo-sm.webp" onerror="this.onerror=null;this.src='images/logo-sm.jpg';" alt="Jerry-Edits" class="nav-logo" width="45" height="45">
                 <span class="nav-brand">Jerry Edits</span>
             </div>
             <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
@@ -74,7 +81,7 @@
     <section class="section-4" id="section-4">
         <div>
             <div class="left">
-                <img class="logo" src="images/logo.jpg" alt="Jerry-Edits logo">
+                <img class="logo" src="images/logo-sm.webp" onerror="this.onerror=null;this.src='images/logo-sm.jpg';" alt="Jerry-Edits logo" width="130" height="130">
                 <div class="font">
                     <p>Jerry-Edits</p>
                     <a href="https://www.youtube.com/@jerryedits4" target="_blank" rel="noopener noreferrer">
